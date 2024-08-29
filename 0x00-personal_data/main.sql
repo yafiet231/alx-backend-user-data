@@ -1,10 +1,10 @@
 -- setup mysql server
 -- configure permissions
-CREATE DATABASE IF NOT EXISTS my_db;
+CREATE DATABASE IF NOT EXISTS holberton;
 CREATE USER IF NOT EXISTS root@localhost IDENTIFIED BY 'root';
-GRANT ALL PRIVILEGES ON my_db.* TO 'root'@'localhost';
+GRANT ALL PRIVILEGES ON holberton.* TO 'root'@'localhost';
 
-USE my_db;
+USE holberton;
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
