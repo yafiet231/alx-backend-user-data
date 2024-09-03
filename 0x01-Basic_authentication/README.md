@@ -1,7 +1,5 @@
 # Basic authentication
 
-## Tasks To Complete
-
 ## RESOURCES
 + [x] [REST API Authentication Mechanisms](https://intranet.alxswe.com/rltoken/ssg5umgsMk5jKM8WRHk2Ug)
 + [x] [Base64 in Python](https://intranet.alxswe.com/rltoken/RpaPRyKx1rdHgRSUyuPfeg)
@@ -9,6 +7,7 @@
 + [x] [Flask](https://intranet.alxswe.com/rltoken/HG5WXgSja5kMa29fbMd9Aw)
 + [x] [Base64-concept](https://intranet.alxswe.com/rltoken/br6Rp4iMaOce6EAC-JQnOw)
 
+## Tasks To Complete
 + [x] 1. **Error handler: Unauthorized**
   + Edit [api/v1/app.py](api/v1/app.py):
     + Add a new error handler for this status code, the response must be:
