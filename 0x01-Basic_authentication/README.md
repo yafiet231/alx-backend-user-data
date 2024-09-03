@@ -2,40 +2,12 @@
 
 ## Tasks To Complete
 
-+ [x] 0. **Simple-basic-API**
-  + Setup and start server:
-    ```powershell
-    bob@dylan:~$ pip3 install -r requirements.txt
-    ...
-    bob@dylan:~$
-    bob@dylan:~$ API_HOST=0.0.0.0 API_PORT=5000 python3 -m api.v1.app
-     * Serving Flask app "app" (lazy loading)
-    ...
-    bob@dylan:~$
-    ```
-  + Use the API (in another tab or in your browser):
-    ```powershell
-    bob@dylan:~$ curl "http://0.0.0.0:5000/api/v1/status" -vvv
-    *   Trying 0.0.0.0...
-    * TCP_NODELAY set
-    * Connected to 0.0.0.0 (127.0.0.1) port 5000 (#0)
-    > GET /api/v1/status HTTP/1.1
-    > Host: 0.0.0.0:5000
-    > User-Agent: curl/7.54.0
-    > Accept: */*
-    >
-    * HTTP 1.0, assume close after body
-    < HTTP/1.0 200 OK
-    < Content-Type: application/json
-    < Content-Length: 16
-    < Access-Control-Allow-Origin: *
-    < Server: Werkzeug/1.0.1 Python/3.7.5
-    < Date: Mon, 18 May 2020 20:29:21 GMT
-    <
-    {"status":"OK"}
-    * Closing connection 0
-    bob@dylan:~$
-    ```
+## RESOURCES
++ [x] [REST API Authentication Mechanisms](https://intranet.alxswe.com/rltoken/ssg5umgsMk5jKM8WRHk2Ug)
++ [x] [Base64 in Python](https://intranet.alxswe.com/rltoken/RpaPRyKx1rdHgRSUyuPfeg)
++ [x] [HTTP header Authorization](https://intranet.alxswe.com/rltoken/WlARq8tQPUGQq5VphLKM4w)
++ [x] [Flask](https://intranet.alxswe.com/rltoken/HG5WXgSja5kMa29fbMd9Aw)
++ [x] [Base64-concept](https://intranet.alxswe.com/rltoken/br6Rp4iMaOce6EAC-JQnOw)
 
 + [x] 1. **Error handler: Unauthorized**
   + Edit [api/v1/app.py](api/v1/app.py):
@@ -157,12 +129,3 @@
       + `/api/v1/users` will return `True`.
       + `/api/v1/status` will return `False`.
       + `/api/v1/stats` will return `False`.
-
-
-
-## RESOURCES
-+ [x] [REST API Authentication Mechanisms](https://intranet.alxswe.com/rltoken/ssg5umgsMk5jKM8WRHk2Ug)
-+ [x] [Base64 in Python](https://intranet.alxswe.com/rltoken/RpaPRyKx1rdHgRSUyuPfeg)
-+ [x] [HTTP header Authorization](https://intranet.alxswe.com/rltoken/WlARq8tQPUGQq5VphLKM4w)
-+ [x] [Flask](https://intranet.alxswe.com/rltoken/HG5WXgSja5kMa29fbMd9Aw)
-+ [x] [Base64-concept](https://intranet.alxswe.com/rltoken/br6Rp4iMaOce6EAC-JQnOw) 
