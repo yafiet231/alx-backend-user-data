@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Module for session authentication with expiration and storage support for the API."""
+"""Defines session authentication with expiration
+and storage support module for the API.
+"""
 from flask import request
 from datetime import datetime, timedelta
 
@@ -8,10 +10,13 @@ from .session_exp_auth import SessionExpAuth
 
 
 class SessionDBAuth(SessionExpAuth):
-    """Handles session authentication with expiration and storage capabilities."""
+    """Defines session authentication class with expiration
+    and storage support.
+    """
 
     def create_session(self, user_id=None) -> str:
-        """Generates and stores a session ID for the user."""
+        """Creates and stores a session id for the user.
+        """
         session_id = super().create_session(user_id)
         if type(session_id) == str:
             kwargs = {
@@ -23,7 +28,9 @@ class SessionDBAuth(SessionExpAuth):
             return session_id
 
     def user_id_for_session_id(self, session_id=None):
-        """Fetches the user ID associated with a given session ID."""
+        """Retrieves the user id of the user associated with
+        a given session id.
+        """
         try:
             sessions = UserSession.search({'session_id': session_id})
         except Exception:
@@ -38,7 +45,8 @@ class SessionDBAuth(SessionExpAuth):
         return sessions[0].user_id
 
     def destroy_session(self, request=None) -> bool:
-        """Terminates an authenticated session."""
+        """Destroys an authenticated session.
+        """
         session_id = self.session_cookie(request)
         try:
             sessions = UserSession.search({'session_id': session_id})
